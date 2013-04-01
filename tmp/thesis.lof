@@ -1,0 +1,14 @@
+\select@language {finnish}
+\select@language {english}
+\select@language {finnish}
+\select@language {english}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces High-level architecture overview}}{3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Magnolia CMS 5.0 Architecture}}{6}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Location framework pt.1}}{11}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Location framework pt.2}}{13}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Model-View-Presenter}}{15}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Node2Bean mapping example}}{18}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Registration of Apps.}}{21}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces App Context Management}}{22}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces Magnolia Shell}}{24}

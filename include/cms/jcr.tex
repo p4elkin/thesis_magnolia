@@ -1,0 +1,41 @@
+Java Content Repository (JCR) is the core underlying technology for storing and
+managing data in Magnolia CMS. JCR is a standard programming interface for
+communication with content repositories. JCR was first established in Java
+Specification Request 170 (JSR-170). Current JCR version 2.0 was finalized in
+JSR-283. JCR is able to handle both structured and unstructured content
+specified within hierarchical storage. Magnolia CMS uses Apache Jackrabbit
+reference implementation of JCR and within the scope of current paper adheres to
+the Java Content Repository standard.
+
+\paragraph{Content Repository} stands for a high-level data management system
+allowing for various operations to be performed over the stored content. These
+are the most essential features of a Content Repository:
+
+\begin{itemize}
+  \item Aforementioned ability to store either structured content (e.g. Extensible Mark-up Language (XML)
+  files, page templates etc) or unstructured (e.g. Binary Large OBjects (BLOB)).
+  \item Referential integrity: support for primary and foreign keys and handling
+  the violation of them.
+  \item Querying data. The typical language to acces content repository is XML Path Language (XPath) \cite{xpath} 
+  XPath. However, Structured Query Language (SQL) dialects usually can also be used.
+\end{itemize}
+
+A Magnolia CMS instance works with a single repository (called
+\texttt{magnolia}). Semantic separation between datasets is provided with
+\emph{workspaces}. Workspace is a tree-like structures with a single root.
+The leaves of such a tree are called \emph{properties}. \emph{Properties} carry the all the
+actual content of the repository.
+
+From the perspective of this thesis, the most important workspaces of the Magnolia CMS are:
+\begin{itemize}
+  \item \emph{website} Stores the pages, paragraphs and most of the content  for the websites.
+  \item \emph{config} The configuration settings.
+  \item \emph{DAM} Workspace for Dynamic Asset Management.
+  \item \emph{users} Stores all the types of user accounts (administrative, system public etc).
+\end{itemize}
+
+ We will especially concentrate on the \emph{config} workspace as configuration
+ will play a significant role in the
+foundation for the flexible user interface (see Chapter \ref{architecture}). We will
+also touch the \emph{DAM workspace} when we will discuss the Asset Management in
+the Chapter \ref{implementation}.

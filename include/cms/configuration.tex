@@ -1,0 +1,50 @@
+\section{Configuration and Definition}
+Configuration mechanism is an essential feature of many software products. It
+enhances the flexibility and extensibility. Magnolia CMS is also configurable.
+Most of configuratuions are kept within \emph{config} workspace. There are
+several techniques in Magnolia CMS that are used for applying the configuration.
+The main two concepts are \emph{observation} and \emph{Node2Bean}.
+
+\subsection{Observation} is a feature of JCR that allows for subscribing to the
+changes in a workspace. Observing applications can monitor and react on those
+changes whenever the persistent operation is made in JCR. This feature has found
+various ways of applications in Magnolia CMS. For instance, one of the most
+important ways is the foundation for the factory-based [TODO: consider factory
+appendix] structures: some sort of bindings are stored in a workspace in a form
+of the registry which is later used in the factory to produce the actual objects.
+
+\subsection{Node2Bean} is used to convert the JCR nodes into the Java objects. 
+
+By means of Java Reflection (introspection mechanism) Node2Bean binds the the
+fields of a Java Bean to the corresponding configuration properties (if such are
+available) through the bean's "setter" and "adder" methods. Node2Bean can
+support all possible data types:
+\begin{itemize}
+  \item Simple data types like \texttt{String, int, long, float, double, boolean}.
+  \item Collections with String values or other data types by specifying a class property.
+  \item Maps with keys and values as Strings or other data types by specifying a class property.
+  \item Complex classes can be mapped with Node2Bean by means of the sub-nodes
+  which follow the same rules and restrictions.
+\end{itemize}
+
+Let us consider an example of using Node2Bean:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{node_to_bean.png}
+	\caption{Node2Bean mapping example}
+	\label{fig:node2bean}
+\end{figure}
+
+Numbered items:
+
+\begin{itemize}
+  \item config: Entry point of the transformation. In the module descriptor
+  \texttt{SampleConfig} class is used. Set text and number properties.
+  \item sub: Sub bean. The class is determined using reflection if it is not
+  explicitly defined.
+  \item items: Collection. The corresponding add method is used to determine the
+  class and populate the collection if existing.
+  \item item2: Special item with its own class and additional properties.
+  \item parameters: Collection of key-value pairs.
+\end{itemize}

@@ -1,0 +1,91 @@
+% %This is a very basic article template.
+% %There is just one section and two subsections.
+\documentclass[pdftex,a4paper]{article}
+
+\usepackage{setspace}
+\usepackage{graphicx}
+
+\usepackage[
+top    = 3cm,
+bottom = 4cm,
+left   = 4cm,
+right  = 2cm]{geometry}
+
+\graphicspath{{./img/}}
+\linespread{1.5}
+\usepackage{float}
+\floatstyle{boxed} 
+\restylefloat{figure}
+
+% Default margins are too wide all the way around. I reset them here
+
+\begin{document}
+\fontsize{12pt}{14pt}
+\selectfont
+
+\tableofcontents \listoffigures
+
+
+
+
+  
+ 
+
+
+
+
+
+
+
+
+
+
+\begin{thebibliography}{9}
+
+\bibitem{Magnolia documentation}
+  \emph{Magnolia documentation:} 
+  
+  http://documentation.magnolia-cms.com/index.html
+
+\bibitem{cms_growth}
+  \emph{The most popular 5 CMS:} 
+  
+  http://www.qarea.com/articles/most-popular-5-cms-choose-best-one-creation-your-Web Site
+
+\bibitem{drdobbs_cms_decouple}
+  \emph{Magnolia Decouples the CMS for Developers:} 
+  
+  http://www.drdobbs.com/mobile/magnolia-decouples-the-cms-for-developer/240006760  
+ 
+ \bibitem{BorisCraft}
+  \emph{Raising the Bar in CMS Usability with Vaadin:} 
+  
+  http://www.betterfasterbigger.com/2011/02/raising-bar-in-cms-usability-with.html
+  
+ \bibitem{ArchitectureManifests}
+  \emph{Magnolia CMS 5.0 - Architecture manifests:} 
+  
+  http://philipp-baerfuss-magnolia.blogspot.ch/2011/03/magnolia-50-architecture-manifests.html
+  
+ \bibitem{MagnoliaShell}
+  \emph{MagnoliaShell} 
+  
+  http://wiki.magnolia-cms.com/display/DOCS/Magnolia+Shell
+ 
+ \bibitem{dlipp_why_vaadin}
+  \emph{Why to use Vaadin in Magnolia 5.0?} 
+   
+  http://www.slideshare.net/DanielLipp/mgnl5whyvaadin
+  
+  \bibitem{BookOfVaadin}{BoV} 
+  \emph{Book of Vaadin:}
+  
+  https://vaadin.com/book/-/page/preface.html
+  
+  \bibitem{GWT}{GWT}
+  \emph{GWT:}
+  
+  https://developers.google.com/web-toolkit/overview
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,244 @@
+%  
+% Features:
+%  � Proper page sizes as required by university guide for students:
+%      � proper font sizes as well as linespacings
+%      � proper size of margins
+%  � Generic title page:
+%      � \gentitle
+%  � Generic abstract page(s):
+%      � \begin{itabstract}{Keywords}
+%          abstract text
+%        \end{itabstract}
+%      � \begin{ittiivis}...\end{ittiivis} provides finnish version
+%         � ittiivis defaults to finnish so no need to issue 
+%           \selectlanguage{finnish}
+%      � total number of pages as well as total number of pages in appendices
+%        are automagically handled
+%  � Entry environment:
+%      � \begin{entry}[widest label]
+%          \item[1st label text] ...
+%          \item[2nd label text] ...
+%        \end{entry}
+%      � the actual items are aligned to suit the widest label, which is
+%        given as an argument to the environment
+%  � Use of specific latex packages to ease in formatting the thesis:
+%      � format table of contents to have bibliography shown as references
+%        as well as other fixes           (tocbibind)
+%      � enhanced verbatim handling       (sverb)
+%      � source code inclusion            (listings)
+%      � handling of headers and footers  (fancyhdr)
+%
+%      � consultation of the manuals of these packages is strongly
+%        encouraged 
+%
+% Assumptions:
+%  � itpackage.sty file is available 
+%  � each chapter is as a separate file which is read in with e.g. \input
+%   
+% Miscellaneous:
+%  � comments are welcome
+%  � should a required package be missing see http://www.ctan.org/ 
+%  � http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper,12pt]{report}
+% ams-packages for maths
+\usepackage{amssymb,amsthm,amsmath}
+
+% babel-package for automatic hyphenation
+\usepackage[english,finnish]{babel}
+\usepackage[latin1]{inputenc}
+
+% load graphicx package
+%   � automagically select proper parameters depending on whether
+%     we're running pdflatex or latex
+%   � specify \includegraphics{file} without the file extension
+%     (.eps /.pdf (/ .png / .jpeg / ...)), tex should select the proper file
+%
+\usepackage{ifpdf}
+\usepackage{graphicx}
+
+% load tocbibind package 
+%   do not include table of contents in itself
+%   convert the name of bibliography to references
+\usepackage[nottoc]{tocbibind}
+\settocbibname{References}
+
+% load sverb package
+% enhanced handling of verbatim stuff; listing environment
+\usepackage{sverb}
+\usepackage{acronym}
+
+% load listings package
+% handle inclusion of source code
+\usepackage{listings}
+\usepackage{color}
+\usepackage{url}
+
+% load fancyheaders package
+% the actual headers and footers are set later
+\usepackage{fancyhdr}
+
+% load itpackage 
+% additional defines and stuff
+\usepackage{itpackage}
+\usepackage{float}
+\floatstyle{boxed} 
+\restylefloat{figure}
+
+\graphicspath{{./img/}}
+
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.66}
+\renewcommand{\dbltopfraction}{.66}
+\renewcommand{\dblfloatpagefraction}{.66}
+
+\setcounter{topnumber}{9}
+\setcounter{bottomnumber}{9}
+\setcounter{totalnumber}{20}
+\setcounter{dbltopnumber}{9}
+
+% main document starts here
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true
+  tabsize=3
+}
+
+% Hyphenation within texttt
+\DeclareFontFamily{\encodingdefault}{\ttdefault}{\hyphenchar\font=`\-}
+
+\begin{document}
+\lstset{language=Java}
+
+%%% fill in your information below
+\workinfo
+{Oma Nimi}
+{Manolia CMS. Next Generation CMS Development With Vaadin |OR|
+ Magnolia CMS and Vaadin. Integration of an Application Framework in CMS Development Process.
+  
+}
+{Tarkastaja yksi}
+{Tarkastaja kaksi}
+{Vuosiluku}
+{Month}
+{Kuukausi}
+%% set the type of your thesis (Diplomity�, TkK -tutkielma, etc.) below
+\worktype{Type of  thesis}{Ty�n tyyppi}
+ 
+%% set the laboratory or field of study
+\deptinfo{Laboratory Name}{Labran Nimi}
+
+% generate the title page 
+\gentitle
+% generate abstract
+\begin{itabstract}{list, of, keywords}
+Here comes a short abstract.
+\end{itabstract}
+
+% select language here (note that english also needs to set enclname)
+%\selectlanguage{finnish}
+\selectlanguage{english}\def\enclname{Appendices}
+
+% empty pagestyle for table of contents etc. 
+%
+% the redefinition of plain style works also for 1st pages of chapters,
+% which is the default in report class. Just state \thispagestyle{empty}
+% after \chapter{something} if you want empty style for the 1st pages. 
+%
+\pagestyle{empty}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0 pt}
+}
+
+% roman numbering for table of contents etc.
+\pagenumbering{roman}
+
+% insert table of contents, list of figures, list of tables
+%
+% setting the counter to zero effectively removes the page number from
+% the toc, lof etc. entries in the toc since there is no roman numeral
+% for zero ;-) (if you want them without numbering)
+%
+%\setcounter{page}{0}
+
+%********************************%
+%Table of Contents               %
+%********************************%
+\tableofcontents
+\clearpage
+
+\setcounter{page}{0}
+%********************************%
+%List of figures                 %
+%********************************%
+\listoffigures 
+\clearpage
+\setcounter{page}{0}
+
+%********************************%
+%List of tables                  %
+%********************************%
+%\listoftables
+
+% possibly insert 'list of acronyms'
+%
+%   create a chapter called List Of Acronyms (or whatever), which
+%     should contain all your acronym definitions, e.g. 
+%     \chapter{List Of Acronyms} 
+%   the secnumdepth trickery is needed because acronyms are as a
+%     standard chapter and we are faking '\listofacronyms'
+%
+%\setcounter{secnumdepth}{-1}
+%\input{your acronym chapter's file name}
+\setcounter{secnumdepth}{2}
+% setup page numbering, page counter, etc.
+\startpages
+\lstset{language=Java}
+\setcounter{chapter}{0}
+%\input{include/1-introduction.tex}
+%\input{include/2-cms.tex}
+%\input{include/3-thesisproblem.tex}
+%\input{include/4-techstack.tex}
+\input{include/5-architecture.tex}
+%\input{include/6-impl.tex}
+%\input{include/7-futurepossibilities.tex}
+%\input{include/8-summary.tex}
+%\input{include/bibliography.tex}
+
+% insert references
+\bibliographystyle{unsrt}
+%\bibliography{your bibliography's file name}
+
+% make sure pagecount is correct even if references overflow to a new page
+\pagebreak\addtocounter{page}{-1}
+\eofpages
+\appendices
+
+% create your appendix chapters with command \appchapter{some name} instead
+% of \chapter{some name} for the automagic page counting to work
+
+%\input{file name of appchapter xxx}
+
+\eofapppages
+\end{document}

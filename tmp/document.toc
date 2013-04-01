@@ -1,0 +1,56 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}CMS}{4}
+\contentsline {subsection}{\numberline {2.1}Definition of CMS}{4}
+\contentsline {subsection}{\numberline {2.2}Importance of CMS's in modern Web}{5}
+\contentsline {subsection}{\numberline {2.3}Drawbacks of using CMS}{5}
+\contentsline {subsection}{\numberline {2.4}Most popular CMS's}{5}
+\contentsline {subsection}{\numberline {2.5}Magnolia CMS}{6}
+\contentsline {subsubsection}{\numberline {2.5.1}Position in CMS world}{6}
+\contentsline {subsubsection}{\numberline {2.5.2}Modular structure}{7}
+\contentsline {subsubsection}{\numberline {2.5.3}Templating}{7}
+\contentsline {subsubsection}{\numberline {2.5.4}Scalability}{7}
+\contentsline {subsubsection}{\numberline {2.5.5}JSR-170}{8}
+\contentsline {subsubsection}{\numberline {2.5.6}Admin Central}{8}
+\contentsline {subsubsection}{\numberline {2.5.7}Targets for Magnolia 5.0}{9}
+\contentsline {section}{\numberline {3}Magnolia 5 technology stack}{9}
+\contentsline {subsection}{\numberline {3.1}Requirements}{9}
+\contentsline {subsection}{\numberline {3.2}Vaadin}{10}
+\contentsline {subsubsection}{\numberline {3.2.1}Why Vaadin?}{10}
+\contentsline {subsubsection}{\numberline {3.2.2}What could become a challenge?}{10}
+\contentsline {subsection}{\numberline {3.3}GWT}{10}
+\contentsline {subsubsection}{\numberline {3.3.1}Relation between GWT and Vaadin}{10}
+\contentsline {subsubsection}{\numberline {3.3.2}Role of GWT in the project}{10}
+\contentsline {subsubsection}{\numberline {3.3.3}JSNI}{10}
+\contentsline {subsubsection}{\numberline {3.3.4}JQuery}{10}
+\contentsline {section}{\numberline {4}Project Architecture}{10}
+\contentsline {subsection}{\numberline {4.1}Technology stack roles distribution}{10}
+\contentsline {subsection}{\numberline {4.2}Patterns}{11}
+\contentsline {subsection}{\numberline {4.3}Magnolia Shell}{11}
+\contentsline {subsection}{\numberline {4.4}It is all about apps}{11}
+\contentsline {subsubsection}{\numberline {4.4.1}What is an app in Magnolia 5.0?}{11}
+\contentsline {subsubsection}{\numberline {4.4.2}Administrative applications (Shell Apps)}{11}
+\contentsline {subsubsection}{\numberline {4.4.3}Bundled and community-developed apps}{11}
+\contentsline {subsection}{\numberline {4.5}App framework}{11}
+\contentsline {subsection}{\numberline {4.6}Location framework}{11}
+\contentsline {subsection}{\numberline {4.7}App lifecycle}{11}
+\contentsline {subsubsection}{\numberline {4.7.1}Configuration and registration}{11}
+\contentsline {section}{\numberline {5}Project implementation}{12}
+\contentsline {subsection}{\numberline {5.1}Server side}{12}
+\contentsline {subsubsection}{\numberline {5.1.1}Dependency injection and reflection in Magnolia}{12}
+\contentsline {subsubsection}{\numberline {5.1.2}Building UI components from definitions}{12}
+\contentsline {subsubsection}{\numberline {5.1.3}Managing app lifecycle with locations framework}{12}
+\contentsline {subsubsection}{\numberline {5.1.4}Workbench}{12}
+\contentsline {subsubsection}{\numberline {5.1.5}Actions}{12}
+\contentsline {subsubsection}{\numberline {5.1.6}Managing multiple browser tabs with Vaadin 6}{12}
+\contentsline {subsubsection}{\numberline {5.1.7}Wiring JCR with Vaadin container API}{12}
+\contentsline {subsubsection}{\numberline {5.1.8}Server push}{12}
+\contentsline {subsection}{\numberline {5.2}Server side}{12}
+\contentsline {subsubsection}{\numberline {5.2.1}Fast transitions with JQueryWrapper and CSS3 delegate plugin}{12}
+\contentsline {subsubsection}{\numberline {5.2.2}Adding touch devices support with mgwt library. Gesture recognition}{12}
+\contentsline {subsubsection}{\numberline {5.2.3}Vaadin. Developing custom Vaadin widgets using RPC interfaces and MVP}{12}
+\contentsline {subsection}{\numberline {5.3}Apps}{12}
+\contentsline {subsubsection}{\numberline {5.3.1}Developing Magnolia 5.0 app module}{12}
+\contentsline {subsubsection}{\numberline {5.3.2}Messages app via server push mechanism}{12}
+\contentsline {subsubsection}{\numberline {5.3.3}Workbench and pages editor}{12}
+\contentsline {section}{\numberline {6}Possibilities with Vaadin 7}{12}
+\contentsline {section}{\numberline {7}Summary}{13}

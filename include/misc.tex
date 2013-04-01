@@ -1,0 +1,33 @@
+/section {misc}
+
+/subsection {so-cms-framework-comparison}
+Are both completely different concepts? Or is their an overlap in their meaning?
+
+A web (application) framework is a lower level, generic toolkit for the development of web applications. That could be
+any type of system managing and processing data while exposing it's data and services to human users(via web browsers
+and other interactive clients) as well as machines via the http protocol.
+
+A CMS is one type of such applications: a system to manage content shown in webiste. Usually/historically, this mainly
+means managing (pieces of) text of "pages" shown in a website, and useres that have different levels of access to
+manage this content. That's where the C and the M come from.
+
+With a CMS, you can manage web content. With a Web framework, you build web applications.
+
+Would it be correct to say that a Web Framework is used for the creation of a front-end, while a CMS is used for the
+back-end?
+
+No. It would be correct to say that a web framework can be used to create a CMS. Both contain parts that work on the
+backend as well as on the front end. Often, a CMS is based on a web framework - sometimes CMS developers build there own
+web framework, and sometimes they even expose the API of this framework, so a developer can create extensions to the CMS
+in a way as if he would develop an application with a web framework. Drupal really does this, so you can create real web
+applications based on the integrated framework - with the upside that they will also be easily to integrate into the
+CMS. But that(exposing the API of a web framework) is no necessary criteria for being called a CMS.
+
+If yes, then should the Web Framework use the same technology as the CMS? For example could Ruby on Rails be used in
+combination with Drupal? Or doesn't that make any sense at all?
+
+It's be possible to combine two existing systems build with these two, (e.g. because you want to show some data in a web
+site managed by drupal, that already exists in a Rails-based system). But as Drupal also provides you some of the genric
+functionality of it's underlying web framework, it might not be necessary. You would have to manage and learn two very
+different systems and handle all the problems with there interoperation. So, I'd try to build a website with only one of
+these if possible and only combine them if theres a good reason to.

@@ -1,0 +1,49 @@
+\chapter{Magnolia 5.0 AdminCentral Module Architecture}
+\label{architecture}
+
+The biggest part of the Magnolia 5.0 project is the design and development of
+the AdminCentral module - a replacement for the former \emph{AdminInterface}
+module. Improved user interface is one of the major targets for AdminCentral
+module.
+
+However, the role of AdminCentral is supposed to go far beyond the UI
+shell. It is the point of intersection between most of the other modules, a
+framework that allows to create complex abstractions on top of their
+functionality and provide an easy way to set up communication between them.
+In order to fulfill the aforementioned design requirements for extensibility and
+mobile platforms support - it was decided to emulate the environment of an
+operating system for CMS administration. The resemblence is of course supposed
+to be metaphorical, design-wise. The main idea is to have an environment with a
+chrome and applications that run inside of it. Such a pattern allows for
+creating the additional functionality by merely developing another application.
+In order to maintain the common look and feel for all types of platforms the
+mobile-like way of UI arrangement was chosen: Single Document Interface (SDI)
+with a dashboard and the applications that consume the whole viewport one at a
+time.
+
+the AdminCentral is to provide a framework for the applications: both
+initial and additional apps must be equally easy to develop, the amount of the
+boilerpalte code has to be minimal and the least amount of programming skills
+should be required.
+
+The role of \emph{Vaadin} framework in the \emph{AdminCentral} is to make it
+possible to achive the compromise between the rich UI and the development
+clearness and simplicity.
+With Vaadin it is possible to design the entire application development system
+completely on the server-side: the user interface can be generated directly form
+the configuration templates kept in the storage (JCR) and the powerful
+client-server communication mechanism can be used for emulating the navigation
+ (based on the browser-fragments).
+\input{include/architecture/1-architecture_overview.tex}
+\input{include/architecture/2-tech_stack_role_distrib.tex}
+\input{include/architecture/3-location_framework.tex}
+\input{include/architecture/4-mvp.tex}
+\input{include/architecture/5-configuration.tex}
+\input{include/architecture/6-shellapps_and_apps.tex}
+\input{include/architecture/7-magnolia_shell.tex}
+\input{include/architecture/8-actions.tex}
+
+\section{Dependency injection}
+\input{include/architecture/di.tex}
+
+\pagebreak

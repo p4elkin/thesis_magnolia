@@ -1,0 +1,8 @@
+1.11.2012:
+
+- Mind that amount of sections is big. Consider reducing by merging subsection into one.
+- System validation is needed (feedback).
+- Scholar look up could give the actual .bib tex ref.
+
+http://scholar.google.com/scholar?hl=en&q=robert+martin+object+principles&btnG=&as_sdt=1%2C5&as_sdtp=#
+http://users.utu.fi/samnuutt/gradutex/
