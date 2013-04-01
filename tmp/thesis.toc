@@ -29,14 +29,14 @@
 \contentsline {subsection}{\numberline {1.4.2}View}{16}
 \contentsline {subsection}{\numberline {1.4.3}Model}{16}
 \contentsline {section}{\numberline {1.5}Configuration in Magnolia CMS}{17}
-\contentsline {paragraph}{Observation}{17}
-\contentsline {paragraph}{Node2Bean}{17}
-\contentsline {section}{\numberline {1.6}It Is All About Apps}{19}
-\contentsline {subsection}{\numberline {1.6.1}Shell Apps.}{19}
-\contentsline {subsection}{\numberline {1.6.2}Apps.}{19}
-\contentsline {subsection}{\numberline {1.6.3}App Framework.}{20}
-\contentsline {subsection}{\numberline {1.6.4}App Configuration}{20}
-\contentsline {subsection}{\numberline {1.6.5}App Controllers and App Context.}{22}
-\contentsline {section}{\numberline {1.7}Magnolia Shell}{23}
-\contentsline {section}{\numberline {1.8}Actions}{25}
-\contentsline {section}{\numberline {1.9}Dependency injection}{25}
+\contentsline {paragraph}{Observation}{18}
+\contentsline {paragraph}{Node2Bean}{18}
+\contentsline {section}{\numberline {1.6}It Is All About Apps}{20}
+\contentsline {subsection}{\numberline {1.6.1}Apps}{20}
+\contentsline {subsection}{\numberline {1.6.2}App Framework}{20}
+\contentsline {subsubsection}{App Configuration}{21}
+\contentsline {subsubsection}{App Controllers and App Context.}{23}
+\contentsline {subsection}{\numberline {1.6.3}Shell Apps.}{24}
+\contentsline {section}{\numberline {1.7}Magnolia Shell}{25}
+\contentsline {section}{\numberline {1.8}Actions}{26}
+\contentsline {section}{\numberline {1.9}Dependency injection}{26}

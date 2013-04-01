@@ -1,21 +1,18 @@
 \section{It Is All About Apps}
 \label{section_apps}
-Apps. Magnolia 5 introduces applications of simply \emph{apps} to content
-management. An \emph{app} stands for the configurable, pluggable unit that
+Magnolia 5.0 introduces applications of simply \emph{apps} to content
+management. An \emph{app} stands for the configurable, pluggable unit which
 encapsulates some certain functionality that typically operates over the data
-stored in repository.
-There are two types of apps in Magnolia 5.0 - so called shell apps and simple
-ordinary apps. 
+stored in the JCR repository.
+Magnolia 5.0 comes with a special framework for app management. This framework
+is integrated with Magnolia CMS configuration mechanism which provides the
+data required to start an app and Location Framework which triggers various
+events causing app load, unload and navigation. 
+There are two types of apps in Magnolia 5.0 - besides of apps of a regular type
+(e.g for page editing or workspace browsing) there are special administrative so
+called \emph{shell-apps}.
 
-\subsection{Shell Apps.} There are three and only three shell apps that are
-responsible for administration functions of the system. Those are called
-\emph{AppLauncher}, \emph{Pulse} and \emph{Favorites}. \emph{AppLauncher} is a
-dashboard with app icons allowing for starting apps and navigating between them.
-\emph{Pulse} is an area that contains and receives the notifications and messages for a
-user. Finally, \emph{Favorites} aggregates links and bookmarks allowing for better
-customization of the system.
-
-\subsection{Apps.} An app is \emph{a tool with a very narrowly focused interface
+\subsection{Apps} An app is \emph{a tool with a very narrowly focused interface
 enabling CMS users to work on one set of closely related tasks or one specific
 set of data. An app does not necessarily work on a single, physical data set
 (e.g. the pages of a site), but may cover multiple physical data sets required
@@ -23,12 +20,15 @@ to solve the task it covers.} \cite{maui_apps}. It is worth mentioning that in
 case of Magnolia 5.0 app is not an application per se but rather a concept of a
 user interface metaphor.
 
-\subsection{App Framework.}
-The \emph{App Framework} is a name for Magnolia 5 functionality
-that deals with apps. It also controls app lifecycle events such as starting and
-stopping and bringing the app into focus \cite{wiki_app_framework}.
+\subsection{App Framework}
+The \emph{App Framework} is a name for Magnolia 5 functionality that manages
+apps. This involves interaction with Magnolia CMS configuration mechanism:
+handling the app registry and reacting on changes in app configuration.
+It also controls an app life-cycle events such as starting, displaying, and
+stopping an app \cite{wiki_app_framework}. Finally, the App Framework keeps the contexts of loaded apps,
+maintaining their state and order.
 
-\subsection{App Configuration}
+\subsubsection{App Configuration}
 The primary configuation of the apps is done by means of the
 \texttt{AppDescriptor} class. \texttt{AppDescriptor} is a simple Plain Old Java
 Object (POJO) that holds the meta information like the app name, label and its
@@ -65,7 +65,7 @@ system (the app controllers).
 	\label{fig:app_context}
 \end{figure}
 
-\subsection{App Controllers and App Context.} The cornerstones of the \emph{App Framework} are the two
+\subsubsection{App Controllers and App Context.} The cornerstones of the \emph{App Framework} are the two
 controller objects: \texttt{AppController} and \texttt{ShellAppController}.
 These two objects play a similar role as \texttt{ActivityManager} in the original 
 Places framework of GWT and apps are the analogues of \texttt{Activity}.
@@ -107,3 +107,11 @@ descriptor.
 The \texttt{App} sub-class is basically a \emph{presenter} for a concrete app
 implementation. We will cover the examples of app development in the
 implementation chapter.
+
+\subsection{Shell Apps.} There are three and only three shell apps that are
+responsible for administration functions of the system. Those are called
+\emph{AppLauncher}, \emph{Pulse} and \emph{Favorites}. \emph{AppLauncher} is a
+dashboard with app icons allowing for starting apps and navigating between them.
+\emph{Pulse} is an area that contains and receives the notifications and messages for a
+user. Finally, \emph{Favorites} aggregates links and bookmarks allowing for better
+customization of the system.

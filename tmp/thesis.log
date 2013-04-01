@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  1 APR 2013 22:51
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  2 APR 2013 00:51
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -513,9 +513,6 @@ Package pdftex.def Info: ./img/activities.png used on input line 129.
 (pdftex.def)             Requested size: 426.79135pt x 270.97568pt.
  [12]
 
-LaTeX Warning: Reference `MVP' on page 13 undefined on input line 138.
-
-
 LaTeX Warning: Citation `activities_places' on page 13 undefined on input line 
 140.
 
@@ -523,46 +520,46 @@ LaTeX Warning: Citation `activities_places' on page 13 undefined on input line
 <./img/mvp.jpg, id=72, 803.0pt x 602.25pt>
 File: ./img/mvp.jpg Graphic file (type jpg)
  <use ./img/mvp.jpg>
-Package pdftex.def Info: ./img/mvp.jpg used on input line 18.
+Package pdftex.def Info: ./img/mvp.jpg used on input line 19.
 (pdftex.def)             Requested size: 426.801pt x 320.10074pt.
- [14] [15 <./img/mvp.jpg>]) (./include/architecture/5-configuration.tex [16]
-Overfull \hbox (7.39978pt too wide) in paragraph at lines 9--16
+ [14] [15 <./img/mvp.jpg>]) (./include/architecture/5-configuration.tex [16] [1
+7]
+Overfull \hbox (7.39978pt too wide) in paragraph at lines 31--38
  \OT1/ptm/b/n/12 Ob-ser-va-tion[] []\OT1/ptm/m/n/12 is a fea-ture of JCR that a
 l-lows for sub-scrib-ing to the changes in a workspace.
  []
 
-[17] <./img/node_to_bean.png, id=86, 656.4525pt x 389.455pt>
+<./img/node_to_bean.png, id=86, 656.4525pt x 389.455pt>
 File: ./img/node_to_bean.png Graphic file (type png)
 
 <use ./img/node_to_bean.png>
-Package pdftex.def Info: ./img/node_to_bean.png used on input line 35.
+Package pdftex.def Info: ./img/node_to_bean.png used on input line 57.
 (pdftex.def)             Requested size: 426.79135pt x 253.20811pt.
- [18 <./img/node_to_bean.png>])
-(./include/architecture/6-shellapps_and_apps.tex
+ [18])
+(./include/architecture/6-shellapps_and_apps.tex [19 <./img/node_to_bean.png>]
 
-LaTeX Warning: Citation `maui_apps' on page 19 undefined on input line 22.
+LaTeX Warning: Citation `maui_apps' on page 20 undefined on input line 19.
 
-[19]
 
 LaTeX Warning: Citation `wiki_app_framework' on page 20 undefined on input line
- 29.
+ 28.
 
-<./img/app_configuration.jpg, id=94, 803.0pt x 602.25pt>
+[20] <./img/app_configuration.jpg, id=98, 803.0pt x 602.25pt>
 File: ./img/app_configuration.jpg Graphic file (type jpg)
 
 <use ./img/app_configuration.jpg>
 Package pdftex.def Info: ./img/app_configuration.jpg used on input line 46.
 (pdftex.def)             Requested size: 426.79135pt x 320.10074pt.
- [20]
-<./img/app_controller.png, id=99, 808.01875pt x 565.11125pt>
+ [21]
+<./img/app_controller.png, id=102, 808.01875pt x 565.11125pt>
 File: ./img/app_controller.png Graphic file (type png)
 
 <use ./img/app_controller.png>
 Package pdftex.def Info: ./img/app_controller.png used on input line 63.
 (pdftex.def)             Requested size: 426.79135pt x 298.49004pt.
- [21 <./img/app_configuration.jpg>] [22 <./img/app_controller.png (PNG copy)>])
+ [22 <./img/app_configuration.jpg>] [23 <./img/app_controller.png (PNG copy)>])
  (./include/architecture/7-magnolia_shell.tex
-[23] <./img/magnolia_shell.png, id=109, 1044.90375pt x 925.4575pt>
+[24] <./img/magnolia_shell.png, id=112, 1044.90375pt x 925.4575pt>
 File: ./img/magnolia_shell.png Graphic file (type png)
 
 <use ./img/magnolia_shell.png>
@@ -570,7 +567,7 @@ Package pdftex.def Info: ./img/magnolia_shell.png used on input line 15.
 (pdftex.def)             Requested size: 426.79135pt x 377.99966pt.
 
 
-LaTeX Warning: Citation `mshell_wiki' on page 24 undefined on input line 21.
+LaTeX Warning: Citation `mshell_wiki' on page 25 undefined on input line 21.
 
 
 Overfull \hbox (9.1131pt too wide) in paragraph at lines 20--26
@@ -578,7 +575,7 @@ Overfull \hbox (9.1131pt too wide) in paragraph at lines 20--26
 -cep-tu-ally re-sem-bles the browser
  []
 
-) (./include/architecture/8-actions.tex [24 <./img/magnolia_shell.png>])
+[25 <./img/magnolia_shell.png>]) (./include/architecture/8-actions.tex)
 Overfull \hbox (49.45866pt too wide) in paragraph at lines 2--45
 []\OT1/ptm/m/n/12 http://wiki.magnolia-cms.com/display/DEV/Actions+API+and+conf
 iguration http://wiki.magnolia-
@@ -595,7 +592,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--45
 
  []
 
-(./include/architecture/di.tex)) [25] (./thesis.aux)
+(./include/architecture/di.tex)) [26] (./thesis.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -609,7 +606,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  5402 strings out of 493488
  71999 string characters out of 3141326
- 155031 words of memory out of 3000000
+ 154031 words of memory out of 3000000
  8547 multiletter control sequences out of 15000+200000
  23188 words of font info for 52 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -622,10 +619,10 @@ ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/
 012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-
 dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts
 /type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (30 pages, 602977 bytes).
+Output written on thesis.pdf (31 pages, 604892 bytes).
 PDF statistics:
- 142 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 146 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
