@@ -1,17 +1,32 @@
 \section{Configuration in Magnolia CMS}
 By means of the \emp{Location Framework} and \emph{MVP} pattern which were
-described before we have defined a foundation for a loosely coupled system.
-In order to add a new functional component in such a system would only require
-to implement its logic and to add the proper mapping, so the system would load
-the component on demand. In the current section we will analyze the methods of  
+described before we have defined a foundation for an abstract loosely coupled
+system which is capable loading, rendering and disposing some components.
+Adding a new functionality in such a system would only require to
+implement its logic and to add the proper mapping, so the system would load the
+component on demand. However, the end developer should not be required to change
+the source files or mapping configuration manually. Instead there should be an
+interface by means of which the developer would interact with the system and
+alter its state. In the current section we will analyze the approach of a
+high-level definition mechanism used in Magnolia 5.0.
 
 Configuration mechanism is an essential feature of many software products. It
 enhances the flexibility and extensibility in the sense that the person without
 deep knowledge of the system internals can alter its behavior, re-arrange and
-customize its parts. Magnolia CMS is also configurable.
-Most of configurations are kept within \emph{config} workspace. There are
-several techniques in Magnolia CMS that are used for applying the configuration.
-The main two concepts are \emph{observation} and \emph{Node2Bean}.
+customize its parts. 
+
+Magnolia CMS is also configurable by means of XML. Each module has an XML
+descriptor containing all the properties needed for its description. An example
+of a configurable component could be a registry of the forms with fields which
+would be represented with a set of XML nodes with properties and sub-nodes for
+fields types, captions, default values, validators etc. 
+
+Most of Magnolia CMS configuration files are kept within \emph{config}
+workspace. Displaying this workspace in a form of editable tree would allow the
+user to modify the components visually in real time as long as the system
+instantly reacts on those changes.
+There are several techniques in Magnolia CMS that are used for applying the
+configuration. The main two concepts are \emph{observation} and \emph{Node2Bean}.
 
 \paragraph{Observation} is a feature of JCR that allows for subscribing to the
 changes in a workspace. Observing applications can monitor and react on those
