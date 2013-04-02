@@ -214,7 +214,22 @@ leaks \cite{gwt_memory_leaks} which are the source of various complex issue of
 the programs written in plain Javascript. All this features are perfectly useful
 for building readable and loosely coupled UI interfaces on the client side.
 
-\section{Relation Between GWT and Vaadin}
+\section{JQuery}
+JQuery is a popular JavaScript library which is so popular that it is probably
+the first thing the name of the language is associated with. JQuery simplifies
+HTML document traversing, event handling, animating, AJAX interactions and many
+other areas of web development \cite{jquery}. 
+
+JQuery is a base framework for a wide range of web project's front-end (e.g.
+Wikipedia \cite{jquery}). However, in the case of Magnolia 5.0 project the
+leading role in client-side development is devoted to GWT. Unfortunatelly, GWT
+does not provide the solution for all the problems, a front-end developer might face.
+One of such issues is a support for CSS3 transitions \cite{ccs3_transitions}.
+Transitions API is not yet finally standardized and not fully cross-platform
+which makes it hard to support with GWT. JQuery provides several convenient
+approaches for adopting CSS3 transitions in the project. Due to \emph{JSNI}
+mechanism it is possible to integrate JQuery with GWT and fulfill the gaps in
+functionality of the latter. 
  
 \section{Why Vaadin?}
 \paragraph {Server Side Execution}
@@ -295,14 +310,5 @@ requirements for the system:
   handling gestures and touch events. Thus, it is required to either build a new
   or integrate the existing solution to overcome this issue.
 \end{itemize} 
- 
-\section{JQuery}
-JQuery is a popular JavaScript library which is so popular that it is probably
-the first thing the name of the language is associated with. JQuery simplifies
-HTML document traversing, event handling, animating, AJAX interactions and many
-other areas of web development \cite{jquery}. Event though Magnolia 5.0 is
-intended as a Java project the JSNI integration of JQuery would be very useful
-to implement in order to support transitions between the views as well as
-handling of DOM events.
-[TODO - either write more here (which is likely) or get rid of the paragraph]
+
 \pagebreak
